@@ -9,11 +9,11 @@
 
 <body>
     <script>
-        var a = [3, 5, 5, 5, 5, 7, 8];
+        var a = [3, 5, 5, 5, 5, 7, 8, 2, 6, 4, 2, 8];
         var array = [];
         for (let i = 0; i < a.length; i++) {
             var capso = false;
-            for (let j = i + 1; j < a.length; j++) {
+            for (let j = 0; j < a.length; j++) {
                 if (parseInt(a[i]) + parseInt(a[j]) == 10) {
                     capso = true;
                     var b = a[j];
@@ -25,7 +25,7 @@
             }
         }
         console.log(array);
-        for (let i = 0; i < array.length; i += 2) {
+        for (let i = 0; i < array.length - 1; i += 2) {
             for (let j = 2; j < array.length; j++) {
                 if (array[i] == array[j]) {
                     if (j % 2 == 0) {
@@ -35,7 +35,7 @@
             }
         }
         console.log(array)
-        for (let i = 0; i <= array.length / 2; i += 2) {
+        for (let i = 0; i <= array.length - 1; i += 2) {
             console.log("Cặp số " + i + "là " + array[i] + "-" + array[i + 1]);
         }
     </script>

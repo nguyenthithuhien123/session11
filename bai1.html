@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //nhập n số và in ra n số nguyên tố
+        var n = +prompt("nhập vào số n");
+        var daynguyento = [];
+
+        if (n == 1) {
+            console.log(daynguyento.push(2))
+        } else if (n >= 2) {
+            daynguyento = [2];
+            var count = 1;
+            var i = 3; do {
+                var nt = true;
+                for (let j = 2; j < i; j++) {
+                    if (i % j == 0) {
+                        nt = false;
+                        break;
+                    }
+                }
+                if (nt == true) {
+                    daynguyento.push(i);
+                    count++;
+                } i++;
+            }
+            while (count <n );
+        }
+        console.log(daynguyento);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var array = prompt("nhập vào chuỗi");
+        var array2 = array.split("");
+        console.log(array2);
+        console.log(array3);
+        var chuoicuoi = [];// khởi tạo chuỗi đưa các chuỗi con và độ dài vào
+        for (var j = 0; j < array2.length; j++) {
+            var count = 0;//độ dài của chuỗi
+            var array3 = [];//chuỗi con
+            for (var i = 0; i < array2.length; i++) {
+                if (array3.includes(array2[i])) {
+                    break;//kiểm tra xem phần tử đó có trong chuỗi hay không
+                } else array3.push(array2[i]);
+                count++;
+            }
+            console.log(array3);
+            chuoicuoi.push(array3.join(""), array3.length)//ghép phần tử thành chuỗi, [chuỗi,độ dài chuỗi]
+            i = 0;
+            array2 = array2.splice(count);//cắt bỏ phần tử đã tách và xét lại từ đầu
+        }
+        console.log(chuoicuoi)
+        var max = 0;//độ dài chuỗi lớn nhất bằng 0
+        var chuoidainhat = [] //chuỗi có độ dài lớn nhất
+        for (var f = 1; f < chuoicuoi.length - 2; f += 2) {//chỉ so sánh độ dài nên chỉ lấy giá trị độ dài
+            if (chuoicuoi[f] > max) {
+                max = chuoicuoi[f];//nếu độ dài lớn nhất thì lấy chuỗi
+                chuoidainhat = chuoicuoi[f - 1];
+            }
+        }
+        console.log("chuỗi dài nhất là " + chuoidainhat + " :chiều dài là " + max)
+    </script>
+</body>
+
+</html>
